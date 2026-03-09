@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.addEventListener('input', () => {
         const term = searchInput.value.toLowerCase().trim();
         const filtered = cats.filter(cat => 
-          cat.name.toLowerCase().includes(term) ||
-          cat.chineseName.toLowerCase().includes(term) ||
-          cat.personality.toLowerCase().includes(term) ||
-          cat.story.toLowerCase().includes(term)
-        );
+    cat.name.toLowerCase().includes(term) ||      // 名字检索
+    cat.age.toLowerCase().includes(term) ||       // 年龄检索
+    cat.color.toLowerCase().includes(term) ||     // 花色检索
+    cat.gender.toLowerCase().includes(term) ||    // 性别检索
+    cat.status.toLowerCase().includes(term)       // 状态检索
+);
         displayCats(filtered);
       });
     })
@@ -41,15 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'cat-card';
       card.innerHTML = `
-        <img src="${cat.image}" alt="${cat.name}" onerror="this.src='https://via.placeholder.com/300x220?text=猫咪照片'">
-        <div class="cat-info">
-          <h3>${cat.name} (${cat.chineseName})</h3>
-          <p><strong>性别：</strong>${cat.gender}</p>
-          <p><strong>年龄：</strong>${cat.age}</p>
-          <p><strong>个性：</strong>${cat.personality}</p>
-          <p><strong>小故事：</strong>${cat.story}</p>
-        </div>
-      `;
+    <img src="${cat.image}" alt="${cat.name}" onerror="this.src='https://via.placeholder.com/300x220?text=暂无照片'">
+    <div class="cat-info">
+        <h3>${cat.name}</h3> 
+        <p><strong>性别：</strong>${cat.gender}</p>
+        <p><strong>年龄：</strong>${cat.age}</p>
+        <p><strong>花色：</strong>${cat.color}</p>
+        <p><strong>性格：</strong>${cat.personality}</p>
+        <p><strong>状态：</strong><span class="status-tag status-${cat.status}">${cat.status}</span></p>
+    </div>
+`;
       gallery.appendChild(card);
     });
   }

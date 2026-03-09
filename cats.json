@@ -2,11 +2,12 @@
   {
     "id": 1,
     "name": "小橘",
-    "chineseName": "小橘",
+    "color": "橘猫",
     "gender": "公",
     "age": "约2岁",
-    "personality": "超亲人、爱撒娇、常在饭堂附近",
-    "story": "第一次看到牠是在2025年冬天，很瘦但眼神超亮，现在胖成球了。",
+    "personality":"亲人",
+    "status": "领养喵",
+    "story": "第一次看到牠是在2025年冬天……",
     "image": "images/xiao-ju.jpg"
   }
 ]

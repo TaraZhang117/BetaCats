@@ -78,3 +78,30 @@ footer {
   color: white;
   margin-top: 3rem;
 }
+/* 状态标签的通用样式（圆角、间距等） */
+.status-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white; /* 默认文字为白色，在彩色背景下更清晰 */
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* 根据不同状态显示不同颜色 */
+.status-在校喵 {
+    background-color: #FFB6C1; /* 粉色 */
+}
+
+.status-喵星喵 {
+    background-color: #A9A9A9; /* 灰色 */
+}
+
+.status-领养喵 {
+    background-color: #FFD700; /* 黄色 */
+    color: #333; /* 黄色背景下用深色字更清晰 */
+}
+
+.status-寄养喵 {
+    background-color: #87CEFA; /* 蓝色 */
+}
